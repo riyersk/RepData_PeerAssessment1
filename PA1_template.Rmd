@@ -2,7 +2,9 @@
 title: "Reproducible Research Course Project 1"
 author: "Rishabh Iyer"
 date: "July 23, 2017"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
