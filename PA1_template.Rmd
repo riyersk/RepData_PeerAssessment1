@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 The following code loads the data. For this to work, the csv file titled "activity.csv" needs to be in the working directory.
 
 ```{r activity, echo = TRUE}
+unzip("activity.zip")
 activity <- read.csv("activity.csv")
 ```
 ## Looking at the data

@@ -127,7 +127,8 @@ $(document).ready(function () {
 <div id="loading-the-data" class="section level2">
 <h2>Loading the data</h2>
 <p>The following code loads the data. For this to work, the csv file titled “activity.csv” needs to be in the working directory.</p>
-<pre class="r"><code>activity &lt;- read.csv(&quot;activity.csv&quot;)</code></pre>
+<pre class="r"><code>unzip(&quot;activity.zip&quot;)
+activity &lt;- read.csv(&quot;activity.csv&quot;)</code></pre>
 </div>
 <div id="looking-at-the-data" class="section level2">
 <h2>Looking at the data</h2>
