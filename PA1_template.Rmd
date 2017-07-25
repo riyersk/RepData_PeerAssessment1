@@ -34,7 +34,7 @@ For this part of the assignment, we have to 1) calculate the total number of ste
 
 From running the code below, we see that the mean is 10766.19 steps, and the median is 10765 steps.
 
-```{r daily totals, echo=TRUE}
+```{r dailyTotals, echo=TRUE}
 totals <- data.frame("date" = unique(activity$date), "totalSteps" = integer(length(unique(activity$date))))
 for(x in unique(activity$date)){
   totals$totalSteps[totals$date==x]=sum(activity$steps[activity$date==x])
@@ -48,7 +48,7 @@ rm(totals)
 ## Average Daily Activity Pattern
 For this part of the assignment, we have to 1) Make a time series plot of the 5 minute interval and the average number of steps taken across all days and 2) answer the question: which 5 minute interval, on average across all days in the dataset, contains the maximum number of steps? From running the code below, we see that the 5 minute interval with the highest average number of steps is the interval between 8:35 and 8:40 (military time).
 
-```{r average interval steps, echo = TRUE}
+```{r averageIntervalSteps, echo = TRUE}
 steps <- integer(288)
 for (x in 0:287){
   steps[x+1] = mean(activity$steps[activity$interval==x], na.rm = TRUE)
@@ -78,7 +78,7 @@ For this assignment, we have to 1) Calculate and report the total number of miss
 From the above analysis, we already know there are 2304 missing values, but we'll repeat the analysis here for the sake of following the assignment. For the sake of the missing values, we'll replace each missing value with the average step value for that interval across all days.
 
 Given our strategy for filling in the missing values, the mean number of total steps per day should not change, and the median should move toward the mean. Regarding the histogram, our strategy for filling in the missing values will add 8 values to the cell containing the mean, so the cell in the histogram containing the mean will increase in height by 8 units. Running the code confirms these predictions.  Regarding estimates of the total daily number of steps, our strategy for imputing missing data does not change the mean estimate but brings the median estimate closer to the mean (i.e., increases it in this case). The new mean is 10766.19, and the new median is 10766.19.  The mean does not differ from the first part of the assignment.  The median is greater than the median from the first part of the assignment.  The impact of imputing missing data on the estimates is to leave the mean unchanged but to increase the median.
-```{r input mssing values}
+```{r inputMissingValues}
 print(paste("There are", sum(is.na(activity)), "missing values in the activity dataset."))
 activity2 <- activity
 for (x in unique(activity2$date[is.na(activity2$steps)])){

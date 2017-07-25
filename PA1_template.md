@@ -55,7 +55,7 @@ rm(x)
 hist(totals$totalSteps, breaks = 20, main = "Total Daily Steps", xlab = "Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/daily totals-1.png)<!-- -->
+![](PA1_template_files/figure-html/dailyTotals-1.png)<!-- -->
 
 ```r
 print(paste("The mean number of total daily steps is", mean(totals$totalSteps, na.rm=TRUE)))
@@ -88,7 +88,7 @@ for (x in 0:287){
 plot(0:287, steps, type = "l", main = "Average number of steps vs 5 minute interval", ylab = "Average Number of Steps", xlab = "5 minute interval of the day, numbered from 0 to 287")
 ```
 
-![](PA1_template_files/figure-html/average interval steps-1.png)<!-- -->
+![](PA1_template_files/figure-html/averageIntervalSteps-1.png)<!-- -->
 
 ```r
 maxint <- (which.max(steps)-1)*5
@@ -144,7 +144,7 @@ rm(x)
 hist(totals2$totalSteps, breaks = 20, main = "Total Daily Steps", xlab = "Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/input mssing values-1.png)<!-- -->
+![](PA1_template_files/figure-html/inputMissingValues-1.png)<!-- -->
 
 ```r
 print(paste("The mean number of total daily steps is", mean(totals2$totalSteps)))
